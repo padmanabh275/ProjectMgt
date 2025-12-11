@@ -1,0 +1,293 @@
+.company-dashboard {
+  width: 100%;
+}
+
+.company-dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.company-dashboard-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.company-dashboard-header p {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.company-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.total-stat .stat-icon {
+  background: #dbeafe;
+  color: var(--primary);
+}
+
+.overdue-stat .stat-icon {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.due-today-stat .stat-icon {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.completed-stat .stat-icon {
+  background: #d1fae5;
+  color: var(--success);
+}
+
+.progress-stat .stat-icon {
+  background: #e0e7ff;
+  color: var(--secondary);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.company-dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.tasks-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.view-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.view-tab {
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--gray-300);
+  background: var(--white);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--gray-700);
+}
+
+.view-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.view-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.departments-section {
+  background: var(--white);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.departments-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.department-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.department-stat-card {
+  background: var(--gray-50);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.department-stat-card:hover {
+  background: var(--white);
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.department-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.department-stat-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.department-stat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.department-stat-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.department-stat-item .label {
+  color: var(--gray-600);
+}
+
+.department-stat-item .value {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.department-stat-item .value.completed {
+  color: var(--success);
+}
+
+.department-stat-item .value.overdue {
+  color: var(--danger);
+}
+
+.department-stat-item .value.due-today {
+  color: var(--warning);
+}
+
+.department-stat-progress {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--gray-500);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray-500);
+}
+
+@media (max-width: 1024px) {
+  .company-dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .departments-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view-tabs {
+    flex-direction: column;
+  }
+
+  .view-tab {
+    width: 100%;
+    text-align: center;
+  }
+}
+
